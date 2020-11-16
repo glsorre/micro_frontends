@@ -23,7 +23,7 @@ cd microfrontend_norouting && yarn install
 
 ### Run
 
-To serve the project at `http://localhost:4000` follow the following procedure
+To serve the project at `http://localhost:4000` follow the following procedure:
 ```bash
 yarn serve #in the repo root folder
 ```
