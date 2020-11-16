@@ -1,6 +1,6 @@
 # micro_frontends
 
-A trivial microfrontend architecture written for training purposes.
+A microfrontend architecture written for training purposes.
 
 ## Powered by:
 
