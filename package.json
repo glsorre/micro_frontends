@@ -26,6 +26,8 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack -w",
+    "serve_main": "concurrently \"cd microfrontend_main && yarn start\" \"serve -l 4000\"",
+    "serve_norouting": "concurrently \"cd microfrontend_norouting && yarn start\" \"serve -l 4000\"",
     "build_main": "cd microfrontend_main && yarn build",
     "build_norouting": "cd microfrontend_norouting && yarn build",
     "serve": "concurrently \"serve -l 4002 --cors microfrontend_norouting/build\" \"serve -l 4001 --cors microfrontend_main/build\" \"serve -l 4000 --single\" \"webpack -w\" \"npm-watch\""
