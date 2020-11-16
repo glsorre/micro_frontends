@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "diff-dom": "^4.2.1",
+    "h-include": "^4.3.0",
+    "history": "^5.0.0",
+    "loadjs": "^4.2.0",
+    "mobx": "^6.0.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "name": "micro_frontends",
+  "version": "1.0.0",
+  "description": "a simple microfrontend architecture written for training purposes",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.2.1",
+    "source-map-loader": "^1.1.2",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "author": "Giuseppe Sorrentino",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w"
+  }
+}
