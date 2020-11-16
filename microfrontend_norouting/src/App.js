@@ -1,23 +1,23 @@
 import './App.css';
 import { useState } from 'react'
-import { useHistory } from "react-router-dom"
 import { observer } from 'mobx-react-lite'
+import { useLocation } from "wouter"
 
 function App() {
   const [counter, setCounter] = useState(0)
-  const history = useHistory()
+  const [location, setLocation] = useLocation()
 
   function handleClick(location) {
-    history.push(location)
+    setLocation(location)
   }
 
-  let DoublerCounter = observer(() => <p>{window.doubler.value}</p>)
+  let DoublerCounter = observer(() => <p>Shared counter: {window.COMMON.doublerGet()}</p>)
 
   return (
     <div className="App">
       <p>You clicked {counter} times</p>
-      <button onClick={() => setCounter(counter + 1)}>Click me</button>
-      <button onClick={() => window.doubler.increment()}>Click me</button>
+      <button onClick={() => setCounter(counter + 1)}>Click to increment local counter.</button>
+      <button onClick={() => window.COMMON.doublerIncrement()}>Click to increment shared counter.</button>
       <DoublerCounter />
       <nav>
         <ul>

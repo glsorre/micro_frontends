@@ -1,27 +1,33 @@
 import React from "react"
 import {
-  Router,
   Switch,
   Route,
   Link
-} from "react-router-dom"
+} from "wouter"
+import { observer } from 'mobx-react-lite'
 
 export default function App() {
+
+  let DoublerCounter = observer(() => <span>{window.COMMON.doublerGet()}</span>)
+  let DoublerDouble = observer(() => <span>{window.COMMON.doublerDouble()}</span>)
+
   return (
-    <Router history={window.appHistory}>
+    <div>
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link href="/about">About</Link>
           </li>
           <li>
-            <Link to="/users">Users</Link>
+            <Link href="/users">Users</Link>
           </li>
         </ul>
       </nav>
+      <p>Shared counter: <DoublerCounter /></p>
+      <p>Doubler: <DoublerDouble /></p>
       <div>
         <Switch>
           <Route path="/about">
@@ -35,7 +41,7 @@ export default function App() {
           </Route>
         </Switch>
       </div>
-      </Router>
+    </div>
   );
 }
 

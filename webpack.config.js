@@ -2,7 +2,8 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    index: { import: './src/index.js', filename: 'main.js' }
+    index: { import: './src/index.js', filename: 'index.js' },
+    router: { import: './src/router.js', filename: 'router.js' }
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

@@ -4,15 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import {
-  Router
-} from "react-router-dom";
-
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={window.appHistory}>
-      <App />
-    </Router>
+    <App />
   </React.StrictMode>,
   document.getElementById('microfrontend_norouting')
 );
