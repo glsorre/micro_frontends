@@ -11,13 +11,20 @@ function App() {
     setLocation(location)
   }
 
+  function handleLocalCounter() {
+    setCounter(counter + 1)
+    if (counter % 5 === 0 && counter !== 0) {
+      window.COMMON.doublerIncrement()
+    }
+  }
+
   let DoublerCounter = observer(() => <p>Shared counter: {window.COMMON.doublerGet()}</p>)
 
   return (
     <div className="App">
-      <p>You clicked {counter} times</p>
-      <button onClick={() => setCounter(counter + 1)}>Click to increment local counter.</button>
-      <button onClick={() => window.COMMON.doublerIncrement()}>Click to increment shared counter.</button>
+      <p>Local counter: {counter}</p>
+      <button onClick={() => handleLocalCounter()}>increment local counter</button><br />
+      <button onClick={() => window.COMMON.doublerIncrement()}>increment shared counter</button>
       <DoublerCounter />
       <nav>
         <ul>

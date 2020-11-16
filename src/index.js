@@ -33,7 +33,7 @@ class Doubler {
     }
 
     get double() {
-        return this.value * 2
+        return this.value ** 2
     }
 
     increment() {

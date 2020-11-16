@@ -35,15 +35,17 @@
   "watch": {
     "build_main": {
       "patterns": [
-        "microfrontend_main/src"
+        "microfrontend_main/src",
+        "microfrontend_main/public"
       ],
-      "extensions": "js,jsx"
+      "extensions": "js,jsx,html"
     },
     "build_norouting": {
       "patterns": [
-        "microfrontend_norouting/src"
+        "microfrontend_norouting/src",
+        "microfrontend_norouting/public"
       ],
-      "extensions": "js,jsx"
+      "extensions": "js,jsx,html"
     }
   }
 }

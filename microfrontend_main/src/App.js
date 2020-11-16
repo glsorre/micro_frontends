@@ -27,7 +27,7 @@ export default function App() {
         </ul>
       </nav>
       <p>Shared counter: <DoublerCounter /></p>
-      <p>Doubler: <DoublerDouble /></p>
+      <p>Squared: <DoublerDouble /></p>
       <div>
         <Switch>
           <Route path="/about">

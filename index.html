@@ -8,49 +8,61 @@
   <body>
     <style>
       #app_content {
-        border: 3px black solid;
+        background: linen;
+        border: 2px solid linen;
         padding: 10px;
-        margin: 10px;
+        margin: 40px 10px;
         position: relative;
+        display: flex;
       }
       #app_content::after {
         position: absolute;
         content: "localhost:4000 - shell";
-        background: black;
-        color: white;
-        bottom: -32px;
-        right: -3px;
-        padding: 6px;
+        background: linen;
+        color: black;
+        font-size: x-small;
+        font-weight: bold;
+        bottom: -27px;
+        right: -2px;
+        padding: 6px 12px;
       }
       #microfrontend_main_container {
-        border: 3px green solid;
+        background: white;
+        border: 2px black dashed;
         padding: 40px;
-        margin: 30px;
+        margin: 40px 10px 40px 5px;
         position: relative;
-      }
-      #microfrontend_norouting_container {
-        border: 3px red solid;
-        padding: 40px;
-        margin: 30px;
-        position: relative;
+        flex-grow: 1;
       }
       #microfrontend_main_container::after {
         position: absolute;
         content: "localhost:4001 - microfrontend_main";
-        background: green;
+        background: black;
         color: white;
-        bottom: -32px;
-        right: -3px;
-        padding: 6px;
+        font-size: x-small;
+        font-weight: bold;
+        bottom: -25px;
+        right: -2px;
+        padding: 6px 12px;
+      }
+      #microfrontend_norouting_container {
+        background: white;
+        border: 2px black dashed;
+        padding: 40px;
+        margin: 40px 5px 40px 10px;
+        position: relative;
+        flex-grow: 1;
       }
       #microfrontend_norouting_container::after {
         position: absolute;
         content: "localhost:4002 - microfrontend_norouting";
-        background: red;
+        background: black;
         color: white;
-        bottom: -32px;
-        right: -3px;
-        padding: 6px;
+        font-size: x-small;
+        font-weight: bold;
+        bottom: -25px;
+        right: -2px;
+        padding: 6px 12px;
       }
     </style>
     <div id="app_content"></div>
