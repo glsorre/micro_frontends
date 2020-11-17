@@ -22,6 +22,12 @@ const extractUrlParams = (route, pathname) => {
     return params
 }
 
+export function navigate(path) {
+    window
+        .history
+        .pushState(null, null, path)
+}
+
 export default () => {
     const routes = []
     let notFound = () => { }
@@ -92,12 +98,6 @@ export default () => {
             lastPathname = window.location.pathname
         }
         return router
-    }
-
-    router.navigate = path => {
-        window
-            .history
-            .pushState(null, null, path)
     }
 
     router.start = () => {
