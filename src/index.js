@@ -9,19 +9,19 @@ if (!window.COMMON) {
     customElements.define('react-h-include', ReactHInclude)
 
     window.COMMON = (function() {
-        var doubler = new Doubler(0) //shared variable available only inside your module
+        var doubler = new Doubler(0)
 
         return {
             navigate,
             doubler: {
-                doublerGet() {
-                    return doubler.value // this function can access my_var
+                get() {
+                    return doubler.value
                 },
-                doublerDouble() {
-                    return doubler.double // this function can access my_var
+                squared() {
+                    return doubler.double
                 },
-                doublerIncrement() {
-                    doubler.increment() // this function can also access my_var
+                increment() {
+                    doubler.increment()
                 }
             }
         };

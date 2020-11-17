@@ -14,17 +14,17 @@ function App() {
   function handleLocalCounter() {
     setCounter(counter + 1)
     if (counter % 5 === 0 && counter !== 0) {
-      window.COMMON.doubler.doublerIncrement()
+      window.COMMON.doubler.increment()
     }
   }
 
-  let DoublerCounter = observer(() => <p>Shared counter: {window.COMMON.doubler.doublerGet()}</p>)
+  let DoublerCounter = observer(() => <p>Shared counter: {window.COMMON.doubler.get()}</p>)
 
   return (
     <div className="App">
       <p>Local counter: {counter}</p>
       <button onClick={() => handleLocalCounter()}>increment local counter</button><br />
-      <button onClick={() => window.COMMON.doubler.doublerIncrement()}>increment shared counter</button>
+      <button onClick={() => window.COMMON.doubler.increment()}>increment shared counter</button>
       <DoublerCounter />
       <nav>
         <ul>
@@ -38,7 +38,7 @@ function App() {
             <button onClick={() => handleClick("/users")}>Users</button>
           </li>
           <li>
-            <button onClick={() => handleClick("/notfound")}>Not Found</button>
+            <button onClick={() => handleClick("/external")}>Shell router link</button>
           </li>
           <li>
             <button onClick={() => handleClick("/404")}>404</button>

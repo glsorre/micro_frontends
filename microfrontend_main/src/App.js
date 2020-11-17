@@ -8,8 +8,8 @@ import { observer } from 'mobx-react-lite'
 
 export default function App() {
 
-  let DoublerCounter = observer(() => <span>{window.COMMON.doubler.doublerGet()}</span>)
-  let DoublerDouble = observer(() => <span>{window.COMMON.doubler.doublerDouble()}</span>)
+  let DoublerCounter = observer(() => <span>{window.COMMON.doubler.get()}</span>)
+  let DoublerDouble = observer(() => <span>{window.COMMON.doubler.squared()}</span>)
 
   return (
     <div>
@@ -23,6 +23,9 @@ export default function App() {
           </li>
           <li>
             <Link href="/users">Users</Link>
+          </li>
+          <li>
+            <Link href="/external">Shell Router Page</Link>
           </li>
         </ul>
       </nav>
