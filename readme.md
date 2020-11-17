@@ -21,9 +21,19 @@ cd microfrontend_main && yarn install
 cd microfrontend_norouting && yarn install
 ```
 
-### Run
+### Run for development
 
 To serve the project at `http://localhost:4000` follow the following procedure:
 ```bash
 yarn serve #in the repo root folder
+```
+
+### Run dockerized with Server Side Injection
+To serve the project at `http://localhost:4000` follow the following procedure:
+```bash
+#in the repo root folder
+yarn build
+yarn build_main
+yarn build_norouting
+docker-compose up 
 ```
