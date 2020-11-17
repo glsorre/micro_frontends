@@ -1,0 +1,14 @@
+FROM alpine:latest
+EXPOSE 4001
+USER root
+
+RUN apk add --update nginx
+RUN mkdir /home/microfrontend_main
+
+COPY microfrontend_main/build /home/microfrontend_main/build
+COPY init.sh /home/microfrontend_main/init.sh
+COPY nginx.main.conf /home/microfrontend_main/nginx.conf
+
+RUN chmod 755 /home/microfrontend_main/init.sh
+
+ENTRYPOINT  ["/home/microfrontend_main/init.sh", "/home/microfrontend_main/nginx.conf"]

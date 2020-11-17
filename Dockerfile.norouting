@@ -1,0 +1,14 @@
+FROM alpine:latest
+EXPOSE 4002
+USER root
+
+RUN apk add --update nginx
+RUN mkdir /home/microfrontend_norouting
+
+COPY microfrontend_norouting/build /home/microfrontend_norouting/build
+COPY init.sh /home/microfrontend_norouting/init.sh
+COPY nginx.norouting.conf /home/microfrontend_norouting/nginx.conf
+
+RUN chmod 755 /home/microfrontend_norouting/init.sh
+
+ENTRYPOINT  ["/home/microfrontend_norouting/init.sh", "/home/microfrontend_norouting/nginx.conf"]

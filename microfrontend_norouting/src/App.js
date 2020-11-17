@@ -37,6 +37,12 @@ function App() {
           <li>
             <button onClick={() => handleClick("/users")}>Users</button>
           </li>
+          <li>
+            <button onClick={() => handleClick("/notfound")}>Not Found</button>
+          </li>
+          <li>
+            <button onClick={() => handleClick("/404")}>404</button>
+          </li>
         </ul>
       </nav>
     </div>

@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     index: { import: './src/index.js', filename: 'index.js' },
-    router: { import: './src/router.js', filename: 'router.js' }
+    navigation: { import: './src/navigation.js', filename: 'navigation.js' }
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

@@ -65,7 +65,14 @@
         padding: 6px 12px;
       }
     </style>
-    <div id="app_content"></div>
+    <div id="app_content" class="ssi">
+      <div id="microfrontend_main_container">
+        <!--#include virtual="/microfrontend_main/index.html" -->
+      </div>
+      <div id="microfrontend_norouting_container">
+        <!--#include virtual="/microfrontend_norouting/index.html" -->
+      </div>
+    </div>
     <script src="./dist/navigation.js"></script>
   </body>
 </html>
