@@ -1,7 +1,7 @@
 import { makeObservable, observable, computed, action } from "mobx"
 import ReactDOM from 'react-dom'
 
-if (!window.COMMON) {
+if (!window.SHELL) {
     require('../node_modules/h-include/lib/h-include.js')
     require('../node_modules/h-include/lib/h-include-extensions.js')
 }

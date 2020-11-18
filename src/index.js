@@ -5,10 +5,10 @@ import { navigate } from './router.js'
 
 window.loadjs = loadjs
 
-if (!window.COMMON) {
+if (!window.SHELL) {
     customElements.define('react-h-include', ReactHInclude)
 
-    window.COMMON = (function() {
+    window.SHELL = (function() {
         var doubler = new Doubler(0)
 
         return {

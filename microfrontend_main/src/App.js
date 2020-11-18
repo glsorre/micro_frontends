@@ -1,15 +1,25 @@
-import React from "react"
+import { observer } from 'mobx-react-lite'
+import { Component } from 'react'
 import {
   Switch,
   Route,
   Link
 } from "wouter"
-import { observer } from 'mobx-react-lite'
 
-export default function App() {
+const injectShell = Comp =>
+  class extends Component {
+    state = { shell: window.SHELL };
 
-  let DoublerCounter = observer(() => <span>{window.COMMON.doubler.get()}</span>)
-  let DoublerDouble = observer(() => <span>{window.COMMON.doubler.squared()}</span>)
+    render() {
+      const { shell } = this.state;
+      return <Comp {...this.props} shell={ shell } />;
+    }
+  };
+
+function App({ shell }) {
+
+  let DoublerCounter = observer(() => <span>{shell.doubler.get()}</span>)
+  let DoublerDouble = observer(() => <span>{shell.doubler.squared()}</span>)
 
   return (
     <div>
@@ -47,6 +57,8 @@ export default function App() {
     </div>
   );
 }
+
+export default injectShell(App)
 
 function Home() {
   return <h2>Home</h2>;
