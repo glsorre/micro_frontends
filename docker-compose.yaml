@@ -10,20 +10,16 @@ services:
       dockerfile: Dockerfile
     container_name: shell
     ports:
-      - "4000:4000"
+      - "5000:4000"
 
   microfrontend_main:
     build:
       context: .
       dockerfile: Dockerfile.main
     container_name: microfrontend_main
-    ports:
-      - "4001:4001"
   
   microfrontend_norouting:
     build:
       context: .
       dockerfile: Dockerfile.norouting
     container_name: microfrontend_norouting
-    ports:
-      - "4002:4002"
