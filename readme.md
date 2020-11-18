@@ -30,7 +30,7 @@ To serve the project at `http://localhost:4000` follow the following procedure:
 yarn serve #in the repo root folder
 ```
 
-### Run dockerized with Server Side Injection
+### Run dockerized with NGNIX Server Side Includes
 To serve the project at `http://localhost:4000` follow the following procedure:
 ```bash
 #in the repo root folder
