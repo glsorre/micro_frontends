@@ -1,5 +1,7 @@
 # micro_frontends
 
+![Simple main page preview](./dev_tool/screenshot.png)
+
 A microfrontend architecture written for training purposes. Based on the following projects:
 
 - [h-include](https://github.com/gustafnk/h-include)
