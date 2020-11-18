@@ -31,7 +31,7 @@ yarn serve #in the repo root folder
 ```
 
 ### Run dockerized with NGNIX Server Side Includes
-To serve the project at `http://localhost:5000` follow the following procedure:
+To serve the project at `http://localhost:4000` follow the following procedure:
 ```bash
 #in the repo root folder
 yarn build
