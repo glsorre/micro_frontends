@@ -1,17 +1,17 @@
+import loadjs from 'loadjs'
 
-import createRouter from './router.js'
-import createPages from './pages.js'
+import { ReactHInclude, AppContainer } from './classes.js'
+import createShell from './shell.js'
 
-const container = document.getElementById('app_content')
+window.loadjs = loadjs
 
-const pages = createPages(container)
-const router = createRouter()
+if (!customElements.get('react-h-include')) {
+    customElements.define('react-h-include', ReactHInclude)
+}
 
-router
-    .addRoute('/', pages.home, true)
-    .addRoute('/users', pages.home, true)
-    .addRoute('/about', pages.home, true)
-    .addRoute('/external', pages.external)
-    .setNotFound(pages.notFound)
-    .checkSSI(container)
-    .start()
+if (!customElements.get('app-container')) {
+    customElements.define('app-container', AppContainer)
+}
+
+const appContent = document.getElementById("app_content")
+appContent.shell = createShell()

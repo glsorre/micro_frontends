@@ -4,7 +4,7 @@ import { observer } from 'mobx-react-lite'
 
 const injectShell = Comp =>
   class extends Component {
-    state = { shell: window.SHELL };
+    state = { shell: document.getElementById("app_content").shell };
 
     render() {
       const { shell } = this.state;
@@ -14,7 +14,6 @@ const injectShell = Comp =>
 
 function App({ shell }) {
   const [counter, setCounter] = useState(0)
-  //const [location, setLocation] = useLocation()
 
   function handleClick(location) {
     shell.navigate(location)

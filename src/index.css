@@ -1,0 +1,65 @@
+body {
+    font-family: sans-serif;
+}
+#app_content {
+    background: linen;
+    border: 2px solid linen;
+    padding: 10px;
+    position: relative;
+    display: flex;
+}
+#app_content::after {
+    position: absolute;
+    content: "localhost:4000 - shell";
+    background: linen;
+    color: black;
+    font-size: x-small;
+    font-weight: bold;
+    bottom: -24px;
+    right: -2px;
+    padding: 6px 12px;
+}
+#microfrontend_main_container {
+    flex-grow: 1;
+}
+#microfrontend_main {
+    background: white;
+    border: 2px black dashed;
+    padding: 40px;
+    margin: 40px 10px 40px 5px;
+    position: relative;
+    flex-grow: 1;
+}
+#microfrontend_main::after {
+    position: absolute;
+    content: "localhost:4001 - microfrontend_main";
+    background: black;
+    color: white;
+    font-size: x-small;
+    font-weight: bold;
+    bottom: -24px;
+    right: -2px;
+    padding: 6px 12px;
+}
+#microfrontend_norouting_container {
+    flex-grow: 1;
+}
+#microfrontend_norouting {
+    background: white;
+    border: 2px black dashed;
+    padding: 40px;
+    margin: 40px 5px 40px 10px;
+    position: relative;
+    flex-grow: 1;
+}
+#microfrontend_norouting::after {
+    position: absolute;
+    content: "localhost:4002 - microfrontend_norouting";
+    background: black;
+    color: white;
+    font-size: x-small;
+    font-weight: bold;
+    bottom: -24px;
+    right: -2px;
+    padding: 6px 12px;
+}

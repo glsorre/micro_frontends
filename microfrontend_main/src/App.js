@@ -8,7 +8,7 @@ import {
 
 const injectShell = Comp =>
   class extends Component {
-    state = { shell: window.SHELL };
+    state = { shell: document.getElementById("app_content").shell };
 
     render() {
       const { shell } = this.state;
