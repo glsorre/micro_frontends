@@ -37,5 +37,5 @@ To serve the project at `http://localhost:4000` follow the following procedure:
 yarn build
 yarn build_main
 yarn build_norouting
-docker-compose up 
+docker-compose up --build
 ```
