@@ -10,10 +10,9 @@ window.loadjs = loadjs
 customElements.define('react-h-include', ReactHInclude)
 customElements.define('app-container', AppContainer)
 
-// document.addEventListener('DOMContentLoaded', function(){
-    const appContent = document.getElementById("app_content")
-    appContent.shell = createShell()
-    const pages = createPages(appContent)
+function init(container) {
+    container.shell = createShell()
+    const pages = createPages()
     const router = createRouter()
 
     router
@@ -22,6 +21,9 @@ customElements.define('app-container', AppContainer)
         .addRoute('/about', pages.home, true)
         .addRoute('/external', pages.external)
         .setNotFound(pages.notFound)
-        .checkSSI(appContent)
+        .checkSSI(container)
         .start()
-// }, false);
+}
+
+const appContent = document.getElementById("app_content")
+init(appContent)

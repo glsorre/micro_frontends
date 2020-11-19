@@ -1,4 +1,4 @@
-export default (container) => {
+export default () => {
     const home = () => {
         container
             .innerHTML = `
