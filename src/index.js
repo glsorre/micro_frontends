@@ -12,7 +12,7 @@ customElements.define('app-container', AppContainer)
 
 function init(container) {
     container.shell = createShell()
-    const pages = createPages()
+    const pages = createPages(container)
     const router = createRouter()
 
     router

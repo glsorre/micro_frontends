@@ -14,4 +14,6 @@ if (!customElements.get('app-container')) {
 }
 
 const appContent = document.getElementById("app_content")
-appContent.shell = createShell()
+if (!appContent.shell) {
+    appContent.shell = createShell()
+}

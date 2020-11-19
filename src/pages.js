@@ -1,4 +1,4 @@
-export default () => {
+export default (container) => {
     const home = () => {
         container
             .innerHTML = `
@@ -6,10 +6,10 @@ export default () => {
                     <h-import src="http://localhost:4001"></h-import>
                     <react-h-include src="http://localhost:4001" fragment="#app_content"></react-h-include>
                 </div>
-                <react-contianer id="microfrontend_norouting_container">
+                <div id="microfrontend_norouting_container">
                     <h-import src="http://localhost:4002"></h-import>
                     <react-h-include src="http://localhost:4002" fragment="#app_content"></react-h-include>
-                </react-contianer>
+                </div>
                 `
     }
 
