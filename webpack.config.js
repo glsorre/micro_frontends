@@ -4,7 +4,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: {
     index: { import: './src/index.js', filename: 'index.js' },
-    navigation: { import: './src/navigation.js', filename: 'navigation.js' }
+    navigation: { import: './src/fauxshell.js', filename: 'fauxshell.js' }
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

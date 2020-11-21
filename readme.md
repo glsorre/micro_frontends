@@ -29,6 +29,7 @@ To serve the project at `http://localhost:4000` follow the following procedure:
 ```bash
 yarn serve #in the repo root folder
 ```
+This will serve also the single microfrontends with a streamlined shell at `http://localhost:4001` and `http://localhost:4002`
 
 ### Run dockerized with NGNIX Server Side Includes
 To serve the project at `http://localhost:4000` follow the following procedure:
@@ -39,3 +40,4 @@ yarn build_main
 yarn build_norouting
 docker-compose up --build
 ```
+This will serve also the single microfrontends with a streamlined shell at `http://localhost:4001` and `http://localhost:4002`
